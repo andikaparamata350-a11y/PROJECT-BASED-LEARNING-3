@@ -1,0 +1,85 @@
+#Project1
+#Manajemen Sistem File Pribadi
+
+C:\Users\Andika> D:
+D:\> mkdir myfiles
+D:\> cd myfiles
+D:\myfiles> mkdir Documents Pictures Videos Music TK
+D:\myfiles> cd TK
+D:\myfiles\TK> mkdir Algoritma Pancasila Agama Sistem Manajemen 
+D:\myfiles\TK> cd ..
+D:\myfiles> move D:\myfiles\Doc.txt
+D:\myfiles> move D:\myfiles\photo.jpg
+D:\myfiles> move D:\myfiles\music.mp3
+D:\myfiles> move D:\myfiles\video.mp4
+D:\myfiles> cd tugaskuliah
+D:\myfiles\tugaskuliah> move D:\myfiles\kemaritiman.txt
+D:\myfiles\tugaskuliah> move D:\myfiles\kewarganegaraan.txt
+D:\myfiles\tugaskuliah> move D:\myfiles\pw.txt
+D:\myfiles\tugaskuliah>move D:\myfiles\bingg.txt
+D:\myfiles\tugaskuliah>move D:\myfiles\logma.txt
+D:\myfiles\tugaskuliah> cd ..
+D:\myfiles> tree
+-documents
+-music
+-pictures
+-tugaskuliah
+   -bingg
+   -kemaritiman
+   -kewarganegaraan
+   -logma
+   -pw 
+-videos
+
+#PROJECT2
+#DIAGNOSTIC NETWORK 
+
+echo ======================= >> "hasil.txt"
+echo network diagnostic >> "hasil.txt"
+echo ======================= >> "hasil.txt"
+
+echo --konfigurasi IP-- >> "hasil.txt"
+ipconfig /all >> "hasil.txt"
+
+echo --koneksi internet-- >> "hasil.txt"
+ping 8.8.8.8 >> "hasil.txt"
+
+echo --cek koneksi-- >> "hasil.txt"
+ping google.com >> "hasil.txt"
+
+echo --trace route-- >> "hasil.txt"
+tracert google.com >> "hasil.txt"
+
+echo --koneksi aktif-- >> "hasil.txt"
+netstat -an >> "hasil.txt"
+
+pause
+
+#PROJECT3
+#BACKUP AUTOMATION
+
+
+@echo off
+echo === Mulai Backup ===
+mkdir "C:\Backup\$date$"
+xcopy "D:\Myfiles\TK" "C:\Backup\$date$" /E /I /Y
+echo === Verifikasi Folder ===
+dir "C:\Backup|$date$"
+pause
+
+#PROJECT4
+#HEALTHCEK
+
+C:\Windows\system32> D:
+D:\> mkdir Healthcek
+D:\> systeminfo > D:\Healthcek\Systeminfo.txt
+D:\> chkdsk > D:\Healthcek\Checkdisk.txy
+D:\> tasklist > D:\Healthcek\Tasklist.txt
+
+#PROJECT5
+#CUSTOM CMD
+
+echo @echo off > startup.bat
+echo color 0A >> startup.bat
+echo prompt $P$G >> startup.bat
+.\startup.bat
